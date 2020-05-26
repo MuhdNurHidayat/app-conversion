@@ -77,6 +77,7 @@ textarea { padding: 0 5px; }
 	   		hexNCRs.value = ''; 
 	   		decNCRs.value = ''; 
 	   		Unicode.value = ''; 
+	   		bracketed.value = '';
 	   		pEsc.value = ''; 
 	   		rust.value = ''; 
 	   		jEsc.value = ''; 
@@ -302,6 +303,14 @@ onclick="decNCRs.value = convertCharStr2SelectiveCPs(convertDecNCR2Char(decNCRs.
       <textarea id="zeroX" name="zeroX" rows="3" cols="5"></textarea></td>
   </tr>
   <tr>
+    <td><!--  *********** [U+] *********** --> 
+      <span class="subhead">[U+hex]</span>
+      <button class="copy" onclick="bracketed.focus(); bracketed.select(); document.execCommand('copy'); return false;" >Copy</button>
+<br/>
+      <textarea id="bracketed" name="bracketed" rows="3" cols="5"></textarea></td>
+    <td>empty</td>
+  </tr>
+  <tr>
   
   
     <td><!--  *********** UTF-8 *********** --> 
@@ -398,6 +407,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 	var hexNCRs = document.getElementById('hexNCRs');
 	var decNCRs = document.getElementById('decNCRs');
 	var Unicode = document.getElementById('Unicode');
+	var bracketed = document.getElementById('bracketed');
 	var pEsc = document.getElementById('pEsc');
 	var rust = document.getElementById('rust');
 	var perl = document.getElementById('perl');
